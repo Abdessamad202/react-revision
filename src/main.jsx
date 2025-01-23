@@ -1,12 +1,15 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Counter } from "./redux-toolkit/counter";
-import { store } from "./redux-toolkit/store/store";
-import {Provider} from 'react-redux'
+import { Provider } from "react-redux";
+import { store } from "./exam/store/store";
+import { BrowserRouter } from "react-router";
+import { App } from "./exam/App";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Provider store={store}>
-      <Counter />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </StrictMode>
 );
